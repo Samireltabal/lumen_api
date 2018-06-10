@@ -37,7 +37,7 @@
                             <td>List All Products</td>
                             <td> - </td>
                             <td> No </td>
-                            <td>http://api.local/api/products/</td>
+                            <td>https://www.carrotapps.net/api/products/</td>
                         </tr>
                         <tr>
                             <td>/api/products/{id}</td>
@@ -45,7 +45,7 @@
                             <td>Show Product Info With Attachments</td>
                             <td> - </td>
                             <td> No </td>
-                            <td>http://api.local/api/products/38</td>
+                            <td>https://www.carrotapps.net/api/products/40</td>
                         </tr>
                         <tr>
                             <td>/api/categories</td>
@@ -53,7 +53,7 @@
                             <td>List All Categories</td>
                             <td> - </td>
                             <td> No </td>
-                            <td>http://api.local/api/categories/</td>
+                            <td>https://www.carrotapps.net/api/categories/</td>
                         </tr>
                         <tr>
                             <td>/api/categories/{id}</td>
@@ -61,7 +61,7 @@
                             <td>List Products From This Category</td>
                             <td> - </td>
                             <td> No </td>
-                            <td>http://api.local/api/categories/3</td>
+                            <td>https://www.carrotapps.net/api/categories/2</td>
                         </tr>
                         <tr>
                         <td>Post</td>
