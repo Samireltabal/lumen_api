@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Log;
 use App\Products;
 use App\Categories;
 use App\Attachments;
@@ -28,7 +29,13 @@ class ProductsController extends Controller
         Get Products By Category Id
     */
     public function listProducts() {
-        return response()->json(Products::all());
+        $start = microtime(true);
+        $products = Cache::remember('productlist', 10, function() {
+            return Products::all();
+        });
+            $duration =( microtime(true) - $start ) * 1000 ;
+            Log::info('Cache : ' . $duration . ' MS');
+            return response()->json($products);
     }
     public function showProduct($id) {
         return response()->json( ['data' => Products::find($id) , 'attachments' => Products::find($id)->attachments]);
